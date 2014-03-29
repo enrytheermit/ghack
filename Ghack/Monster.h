@@ -57,6 +57,17 @@ __DefMonsterInfo(__struct_MonsterManaInfo)
 }
 @end
 
+#define DefMonsterWizardInfo \
+	typedef monsterinfo_t \ 
+typedef struct {} __struct_MonsterWizardInfo \
+__DefMonsterInfo(__struct_MonsterWizardInfo)
+
+@interface MonsterWizardInfo : NSObject 
+{
+	monsterinfo_t _wizardinfo;
+}
+@end
+
 #define DefMonsterPriestInfo \
 	typedef monsterinfo_t \ 
 typedef struct {} __struct_MonsterPriestInfo \
@@ -65,6 +76,17 @@ __DefMonsterInfo(__struct_MonsterPriestInfo)
 @interface MonsterPriestInfo : NSObject 
 {
 	monsterinfo_t _priestinfo;
+}
+@end
+
+#define DefMonsterThiefInfo \
+	typedef monsterinfo_t \ 
+typedef struct {} __struct_MonsterPriestInfo \
+__DefMonsterInfo(__struct_MonsterPriestInfo)
+
+@interface MonsterThiefInfo : NSObject 
+{
+	monsterinfo_t _thiefinfo;
 }
 @end
 
@@ -94,14 +116,17 @@ __DefMonsterInfo(__struct_MonsterEquipmentInfo)
 @interface Monster : NSObject 
 {
 
-	monsterinfo_t _baseinfo;
-	monsterinfo_t _manainfo;
-	monsterinfo_t _priestinfo;
-	monsterinfo_t _levelinfo;
-	monsterinfo_t _equipmentinfo;
+	MonsterTypeInfo *_typeinfo;
+	MonsterBaseInfo *_baseinfo;
+	MonsterManaInfo *_manainfo;
+	MonsterWizardInfo *_wizardinfo;
+	MonsterPriestInfo *_priestinfo;
+	MonsterLevelInfo *_levelinfo;
+	MonsterEquipmentInfo *_equipmentinfo;
 
 }
-/*- (id)init;
-*/
+
+- (id)init;
+
 @end
 

@@ -12,7 +12,9 @@ You should have received a copy of the GNU General Public License along with thi
 struct __struct_MonsterTypeInfo { char *name; char *class; };
 struct __struct_MonsterBaseInfo { char *hitpoints; char *armor; char *strength; };
 struct __struct_MonsterManaInfo { char *manapoints; char *spells; char *manalevel; };
+struct __struct_MonsterWizardInfo { char *manapoints; char *spells; char *manalevel; };
 struct __struct_MonsterPriestInfo { char *clericpoints; char *spells; char *clericlevel; };
+struct __struct_MonsterThiefInfo { char *clericpoints; char *spells; char *clericlevel; };
 struct __struct_MonsterLevelInfo { char *strength; char *dexterity;
 				char *intelligence; char *constitution;
 				char *charisma; };
