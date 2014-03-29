@@ -29,12 +29,13 @@ struct __struct_MonsterCustomInfo {};
 
 #define __Def(type) \
 	typedef type
-
+/***
+  Note : This was made for chaning monsterinfo_t types as non-persistent types*/
 #define __DefMonsterInfo(type) \
-	typedef type MonsterInfo_t 
+	typedef type monsterinfo_t 
 
-typedef struct {} MonsterInfo_t;
-__DefMonsterInfo(MonsterInfo_t);
+typedef struct {} monsterinfo_t;
+__DefMonsterInfo(monsterinfo_t);
 
 /*
  * Do not subclass, use the meta level above
