@@ -19,11 +19,22 @@ struct __struct_MonsterLevelInfo { char *strength; char *dexterity;
 struct __struct_MonsterEquipmentInfo { char *head; char *body; char *feet; char *gloves; };
 struct __struct_MonsterCustomInfo {};
 
-//TODO
-#define __DefMonsterInfo(type) \
+/*FIXME 
+#define __Def2(type2) \
+	typedef struct {} type \
+	##define __DefMonsterInfo() \
+		typedef type2 type \
+	__DefMonsterInfo(type2)
+*/
+
+#define __Def(type) \
 	typedef type
-#define __DefMonsterInfo2(type) \
-	typedef type s
+
+#define __DefMonsterInfo(type) \
+	typedef type MonsterInfo_t 
+
+typedef struct {} MonsterInfo_t;
+__DefMonsterInfo(MonsterInfo_t);
 
 /*
  * Do not subclass, use the meta level above

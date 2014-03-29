@@ -11,14 +11,13 @@ You should have received a copy of the GNU General Public License along with thi
 */
 #include "Monster.h"
 
-typedef struct {} s;
-__DefMonsterInfo(s);
-__DefMonsterInfo2(struct __struct_MonsterTypeInfo);
+typedef struct {} MonsterInfo_t; 
+__DefMonsterInfo(struct __struct_MonsterTypeInfo);
 
 @interface Monster : NSObject 
 {
 
-	s typeinfo;
+	MonsterInfo_t typeinfo;
 
 }
 
