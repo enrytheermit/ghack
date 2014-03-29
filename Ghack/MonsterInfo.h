@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
 /*
-Copyright (C) 2013 enrytheermit 
+Copyright (C) 2013-2014 enrytheermit 
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
@@ -17,11 +17,13 @@ struct __struct_MonsterLevelInfo { char *strength; char *dexterity;
 				char *intelligence; char *constitution;
 				char *charisma; };
 struct __struct_MonsterEquipmentInfo { char *head; char *body; char *feet; char *gloves; };
-//TODO
 struct __struct_MonsterCustomInfo {};
 
-#define __MonsterTypeInfo(monsterinfo) \
-	typedef __struct_MonsterTypeInfo monsterinfo; \
+//TODO
+#define __DefMonsterInfo(type) \
+	typedef type
+#define __DefMonsterInfo2(type) \
+	typedef type s
 
 /*
  * Do not subclass, use the meta level above
@@ -32,4 +34,5 @@ struct __struct_MonsterCustomInfo {};
 }
 
 -(id) init;
+
 @end

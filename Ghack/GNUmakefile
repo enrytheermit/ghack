@@ -34,6 +34,8 @@ Controller.h \
 Character.h \
 Xpm.h \
 MonsterInfo.h \
+Monster.h \
+Newt.h \
 Views.h
 
 #
@@ -44,6 +46,8 @@ Controller.m \
 Character.m \
 Xpm.m \
 MonsterInfo.m \
+Monster.m \
+Newt.m \
 Views.m
 
 #

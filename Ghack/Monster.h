@@ -9,17 +9,17 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 */
-#import "MonsterInfo.h"
+#include "Monster.h"
+
+typedef struct {} s;
+__DefMonsterInfo(s);
+__DefMonsterInfo2(struct __struct_MonsterTypeInfo);
 
 @interface Monster : NSObject 
 {
-	__struct_MonsterTypeInfo typeinfo;		
-	__struct_MonsterBaseInfo baseinfo;		
-	__struct_MonsterManaInfo manainfo;		
-	__struct_MonsterPriestInfo priestinfo;		
-	__struct_MonsterLevelnfo levelinfo;		
-	__struct_MonsterEquipmentInfo equipmentinfo;		
-	__struct_MonsterCustomInfo custominfo;		
+
+	s typeinfo;
+
 }
 
 - (id)init;
