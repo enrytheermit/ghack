@@ -23,9 +23,9 @@ typedef struct {} __struct_MonsterTypeInfo;
 __DefMonsterInfo(__struct_MonsterTypeInfo);
 ***/
 
-typedef monsterinfo_t; 
+typedef int monsterinfo_t; 
 #define DefMonsterTypeInfo \
-	typedef monsterinfo_t \ 
+	typedef monsterinfo_t \
 typedef struct {} __struct_MonsterTypeInfo \
 __DefMonsterInfo(__struct_MonsterTypeInfo)
 
@@ -36,7 +36,7 @@ __DefMonsterInfo(__struct_MonsterTypeInfo)
 @end
 
 #define DefMonsterBaseInfo \
-	typedef monsterinfo_t \ 
+	typedef monsterinfo_t \
 typedef struct {} __struct_MonsterBaseInfo \
 __DefMonsterInfo(__struct_MonsterBaseInfo)
 
@@ -47,7 +47,7 @@ __DefMonsterInfo(__struct_MonsterBaseInfo)
 @end
 
 #define DefMonsterManaInfo \
-	typedef monsterinfo_t \ 
+	typedef monsterinfo_t \
 typedef struct {} __struct_MonsterManaInfo \
 __DefMonsterInfo(__struct_MonsterManaInfo)
 
@@ -58,7 +58,7 @@ __DefMonsterInfo(__struct_MonsterManaInfo)
 @end
 
 #define DefMonsterWizardInfo \
-	typedef monsterinfo_t \ 
+	typedef monsterinfo_t \
 typedef struct {} __struct_MonsterWizardInfo \
 __DefMonsterInfo(__struct_MonsterWizardInfo)
 
@@ -69,7 +69,7 @@ __DefMonsterInfo(__struct_MonsterWizardInfo)
 @end
 
 #define DefMonsterPriestInfo \
-	typedef monsterinfo_t \ 
+	typedef monsterinfo_t \
 typedef struct {} __struct_MonsterPriestInfo \
 __DefMonsterInfo(__struct_MonsterPriestInfo)
 
@@ -80,7 +80,7 @@ __DefMonsterInfo(__struct_MonsterPriestInfo)
 @end
 
 #define DefMonsterThiefInfo \
-	typedef monsterinfo_t \ 
+	typedef monsterinfo_t \
 typedef struct {} __struct_MonsterPriestInfo \
 __DefMonsterInfo(__struct_MonsterPriestInfo)
 
@@ -91,7 +91,7 @@ __DefMonsterInfo(__struct_MonsterPriestInfo)
 @end
 
 #define DefMonsterLevelInfo \
-	typedef monsterinfo_t \ 
+	typedef monsterinfo_t \
 typedef struct {} __struct_MonsterLevelInfo \
 __DefMonsterInfo(__struct_MonsterLevelInfo)
 
@@ -102,7 +102,7 @@ __DefMonsterInfo(__struct_MonsterLevelInfo)
 @end
 
 #define DefMonsterEquipmentInfo \
-	typedef monsterinfo_t \ 
+	typedef monsterinfo_t \
 typedef struct {} __struct_MonsterEquipmentInfo \
 __DefMonsterInfo(__struct_MonsterEquipmentInfo)
 
