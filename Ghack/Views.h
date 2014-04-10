@@ -16,7 +16,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 #define SEPARATOR    0
 #define MARGIN       0 
-#define SIZEW		40	
+#define SIZEW		30	
 #define SIZEH	        30	
 
 typedef enum {
