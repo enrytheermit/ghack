@@ -296,7 +296,7 @@ You should have received a copy of the GNU General Public License along with thi
 			NSLog(@"keydown up");
 		}
 	NSLog(@"keydown");
-
+	fprintf(stdout, "keydown!");
 }
 
 - (void)mouseDown:(NSEvent *)theEvent
@@ -316,15 +316,16 @@ You should have received a copy of the GNU General Public License along with thi
 	int xx = [con getCharacterX]; 
 	int yy = [con getCharacterY];
 	int mx = -1,my = -1;
-	if (theEvent && [theEvent type] != NSLeftMouseUp) {
-		NSPoint point = [self convertPoint:[theEvent locationInWindow] fromView:self];
-		mx = point.x / DIMENSION;//[self row];
-		my = point.y / DIMENSION;//[self col];
+	//if (theEvent && [theEvent type] != NSLeftMouseUp) {
+	//	NSPoint point = [self convertPoint:[theEvent locationInWindow] fromView:self];
+		//mx = point.x / DIMENSION;//[self row];
+		mx = [self col];
+		my = [self row];
 	//NSPoint        point;
 	//float          dx,dy;
 
    	//point = [self convertPoint:[theEvent locationInWindow] fromView:self];
-	}
+	//}
 	NSLog(@"mouse **** %d,%d", mx,my);
 	NSLog(@"self **** %d,%d", xx,yy);
 
