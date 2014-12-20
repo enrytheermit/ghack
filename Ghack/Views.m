@@ -315,28 +315,34 @@ You should have received a copy of the GNU General Public License along with thi
 	//FIXME update character xy
 	int xx = [con getCharacterX]; 
 	int yy = [con getCharacterY];
-
-	int mx = [self row];
-	int my = [self col];
+	int mx = -1,my = -1;
+	if (theEvent && [theEvent type] != NSLeftMouseUp) {
+		NSPoint point = [self convertPoint:[theEvent locationInWindow] fromView:self];
+		mx = point.x / DIMENSION;//[self row];
+		my = point.y / DIMENSION;//[self col];
 	//NSPoint        point;
 	//float          dx,dy;
 
    	//point = [self convertPoint:[theEvent locationInWindow] fromView:self];
-
+	}
 	NSLog(@"mouse **** %d,%d", mx,my);
 	NSLog(@"self **** %d,%d", xx,yy);
 
 	//NSLog(@"charxx----> %d, %d,mousep.x---> %d, %d\n", xx, yy, point.x, point.y);
 
-	if (mx > xx) {
+	if (mx >= 0 && mx == xx) {
+		//do not move
+	} else if (mx >= 0 && mx > xx) {
 		[con moveRight:self];//also sets char xy
-	} else if (mx < xx) {
+	} else if (mx >= 0 && mx < xx) {
 		[con moveLeft:self];
 	}
-	if (my > yy) {
-		[con moveDown:self];
-	} else if (my < yy) {
+	if (my >= 0 && my == yy) {
+		//do not move
+	} else if (my >= 0 && my > yy) {
 		[con moveUp:self];
+	} else if (my >= 0 && my < yy) {
+		[con moveDown:self];
 	} else {
 	}
 

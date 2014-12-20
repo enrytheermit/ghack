@@ -492,8 +492,8 @@ You should have received a copy of the GNU General Public License along with thi
     int c = [character col];
     map[c][r] = prevTileState; 
     [fields[c][r] setTileState:prevTileState];
-    [self genCharacterOnMapRow:r+1 Col:c];
-    [fields[c][r+1] setTileState:TILE_CHARACTER];
+    [self genCharacterOnMapRow:r Col:c+1];
+    [fields[c+1][r] setTileState:TILE_CHARACTER];
 }
 
 -(void)moveLeft:(Square*)item
@@ -504,8 +504,8 @@ You should have received a copy of the GNU General Public License along with thi
     int c = [character col];
     map[c][r] = prevTileState; 
     [fields[c][r] setTileState:prevTileState];
-    [self genCharacterOnMapRow:r-1 Col:c];
-    [fields[c][r-1] setTileState:TILE_CHARACTER];
+    [self genCharacterOnMapRow:r Col:c-1];
+    [fields[c-1][r] setTileState:TILE_CHARACTER];
 }
 
 -(void)moveDown:(Square*)item
@@ -516,8 +516,8 @@ You should have received a copy of the GNU General Public License along with thi
     int c = [character col];
     map[c][r] = prevTileState; 
     [fields[c][r] setTileState:prevTileState];
-    [self genCharacterOnMapRow:r Col:c+1];
-    [fields[c+1][r] setTileState:TILE_CHARACTER];
+    [self genCharacterOnMapRow:r+1 Col:c];
+    [fields[c][r+1] setTileState:TILE_CHARACTER];
 }
 
 -(void)moveUp:(Square*)item
@@ -528,8 +528,8 @@ You should have received a copy of the GNU General Public License along with thi
     int c = [character col];
     map[c][r] = prevTileState; 
     [fields[c][r] setTileState:prevTileState];
-    [self genCharacterOnMapRow:r Col:c-1];
-    [fields[c-1][r] setTileState:TILE_CHARACTER];
+    [self genCharacterOnMapRow:r-1 Col:c];
+    [fields[c][r-1] setTileState:TILE_CHARACTER];
 }
 
 - (char *)getCharacterXpmData
